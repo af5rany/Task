@@ -9,19 +9,18 @@ const UserProfileCard: React.FC = () => {
       <div className="flex flex-col items-start p-[10px]">
         <div className="relative">
           <img
-            src="/profile-icon.jpg" // Replace with your profile image path
+            src="/profile-icon.jpg"
             alt="User Avatar"
             className="w-[120px] h-[120px] rounded-[36px] object-cover object-top"
           />
           <button className="absolute -bottom-1 -right-1 rounded-full hover:shadow">
             <img
-              src="/camera.svg" // Replace with your camera icon path
+              src="/camera.svg"
               alt="Camera Icon"
               className="w-[40px] h-[40px]"
             />
           </button>
         </div>
-        {/* User Info */}
         <h2 className="mt-4 text-lg font-semibold text-gray-800">John Smith</h2>
         <p className="text-sm text-gray-500">Senior Product Manager</p>
       </div>

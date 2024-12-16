@@ -1,3 +1,4 @@
+import { User } from "../../Types";
 import CardLayout from "./CardLayout";
 import EditableCard from "./EditableCard";
 
@@ -40,12 +41,12 @@ const militaryStatus = [
         target="_blank"
         rel="noopener noreferrer"
       >
-        filename1.docx
+        file.docx
       </a>
     ),
   },
 ];
-const ProfileDetails = ({ user, refetch }: { user: any; refetch: any }) => (
+const ProfileDetails = ({ user, refetch }: { user: User; refetch: any }) => (
   <div className="flex flex-col gap-4 w-full">
     <EditableCard
       user={user}

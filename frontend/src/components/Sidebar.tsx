@@ -5,7 +5,7 @@ const Sidebar: React.FC = () => {
   return (
     <div className="h-screen px-[15px] py-[20px] bg-white text-black flex flex-col justify-center items-center">
       <div className="p-4 flex items-center justify-center">
-        <Link to="/">
+        <Link to="#">
           <img src="/logo.png" alt="Logo Icon" className="w-[45px] h-[45px]" />
         </Link>
       </div>
@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
       <nav className="flex-1 mt-7">
         <ul className="flex flex-col gap-[24px]">
           <li>
-            <Link to="/dashboard">
+            <Link to="#">
               <img
                 src="/dashboard.svg"
                 alt="Dashboard Icon"
@@ -22,7 +22,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/employees">
+            <Link to="#">
               <img
                 src="/research.svg"
                 alt="Employees Icon"
@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/reports">
+            <Link to="#">
               <img
                 src="/credit-report.svg"
                 alt="Reports Icon"
@@ -40,7 +40,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/teams">
+            <Link to="#">
               <img
                 src="/teams.svg"
                 alt="Teams Icon"
@@ -49,7 +49,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/storage">
+            <Link to="#">
               <img
                 src="/box.svg"
                 alt="Storage Icon"
