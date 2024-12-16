@@ -61,20 +61,20 @@ const EditableCard: React.FC<EditableCardProps> = ({ user, refetch }) => {
             familyName: formData.localizedFamilyName,
           },
           nationalities: [
-            formData.nationalityId1
+            formData.nationality1
               ? {
                   country: {
-                    id: formData.nationalityId1.toLocaleLowerCase(),
-                    name: formData.nationalityId1,
+                    id: formData.nationality1.toLowerCase().replace(/\s+/g, ""),
+                    name: formData.nationality1,
                   },
                   countryId: parseInt(formData.nationalityId1, 10) || 10,
                 }
               : null,
-            formData.nationalityId2
+            formData.nationality2
               ? {
                   country: {
-                    id: formData.nationalityId2.toLocaleLowerCase(),
-                    name: formData.nationalityId2,
+                    id: formData.nationality2.toLowerCase().replace(/\s+/g, ""),
+                    name: formData.nationality2,
                   },
                   countryId: parseInt(formData.nationalityId2, 10) || 11,
                 }
@@ -201,7 +201,7 @@ const EditableCard: React.FC<EditableCardProps> = ({ user, refetch }) => {
             <label className="text-sm text-gray-500">Nationality</label>
             <input
               className="w-full p-2 border rounded"
-              {...register("nationality")}
+              {...register("nationality1")}
             />
           </div>
           <div>
@@ -210,7 +210,7 @@ const EditableCard: React.FC<EditableCardProps> = ({ user, refetch }) => {
             </label>
             <input
               className="w-full p-2 border rounded"
-              {...register("additionalNationality")}
+              {...register("nationality2")}
             />
           </div>
           <div>
@@ -331,15 +331,15 @@ const EditableCard: React.FC<EditableCardProps> = ({ user, refetch }) => {
               {user.nationalities?.[1]?.country.name || "-"}
             </p>
           </div>
-          <div className="w-[]">
+          <div className="">
             <p className="text-sm text-gray-500">Passport Number</p>
             <p className="font-medium">{user.passport?.number || "-"}</p>
           </div>
-          <div className="w-[]">
+          <div className="">
             <p className="text-sm text-gray-500">Passport Issue Date</p>
             <p className="font-medium">{user.passport?.issueDate || "-"}</p>
           </div>
-          <div className="w-[]">
+          <div className="">
             <p className="text-sm text-gray-500">Passport Expiry Date</p>
             <p className="font-medium">{user.passport?.expiryDate || "-"}</p>
           </div>

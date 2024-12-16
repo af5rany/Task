@@ -42,12 +42,10 @@ export interface User {
   nationalId: NationalId;
 }
 
-// Define the query result type
 export interface GetUserQueryData {
   user: User;
 }
 
-// Define the query variables type
 export interface GetUserQueryVariables {
   userId: number;
 }

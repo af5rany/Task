@@ -41,6 +41,12 @@ export class UserService {
   }
 
   updateUser(userId: number, input: Partial<User>): UpdateResponse {
+    if (input.nationalities) {
+      this.user.nationalities = input.nationalities.map((n) => ({
+        country: { id: n.country.id, name: n.country.name },
+        countryId: n.countryId,
+      }));
+    }
     this.user = { ...this.user, ...input };
     return {
       success: true,
